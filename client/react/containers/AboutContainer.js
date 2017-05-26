@@ -1,10 +1,11 @@
 import React from 'react';
 
 class AboutContainer extends React.Component {
-	constructor(){
-		super()
+	constructor(props){
+		super(props)
 		this.state = {}
 	}
+
 
 	render(){
 		return(

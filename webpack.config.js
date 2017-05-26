@@ -2,10 +2,10 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports ={
-	entry: './client/react/iindex.jsx',
+	entry: './client/react/index.jsx',
 	output: {
 		path: path.join(__dirname, 'client/dist'),
-		fiilename: 'bundle.js';
+		filename: 'bundle.js'
 	},
 	module: {
 		loaders:[

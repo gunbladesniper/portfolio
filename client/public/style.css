@@ -1,1 +1,52 @@
-style.css
+#navbar-container{
+	display: flex;
+	align-items: center;
+}
+
+.nav-spacer {
+	flex: 3;
+}
+
+#navbar {
+  display: flex;
+  flex: 2;
+  align-content: center;
+  justify-content: space-around;
+  border: 1px solid green;
+  list-style-type: none;
+}
+
+.navbar-button {
+	flex: 1;
+}
+
+#bio-component {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#bio-component span {
+	flex: 1;
+}
+
+#bio-component img {
+	flex: 2;
+}
+.project-button-holder{
+      display: flex;
+    flex-wrap: wrap;
+}
+.project-button{
+  display: flex;
+  flex-direction: column;
+      height: 100px;
+    flex: 1;
+}
+
+.project-image{
+  height: 100px;
+  width: 100px;
+}
+
+

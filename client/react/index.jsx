@@ -1,11 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom'
-import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import HomeContainer from './containers/HomeContainer';
 import WorksContainer from './containers/WorksContainer';
 import ProjectContainer from './containers/ProjectContainer';
 import AboutContainer from './containers/AboutContainer';
 import ContactContainer from './containers/ContactContainer';
+import Navbar from './components/Navbar';
 
 class Routes extends React.Component {
 	constructor(){
@@ -15,15 +16,16 @@ class Routes extends React.Component {
 
 	render(){
 		return(
-			<Router history={browserHistory}>
-				<Route path = '/' component={HomeContainer}>
-					<Route path = '/work' component ={WorksContainer} />
-					<Route path = '/work/:id' component ={ProjectContainer} />
-					<Route path = '/about' component ={AboutContainer} />
-					<Route path = '/contact' component ={ContactContainer} />
-					<Route></Route>
-				</Route>
-			</Router>
+			<BrowserRouter>
+				<div>
+  				<Navbar/>
+  				<Route exact path = '/' component={HomeContainer} />
+  				<Route path = '/works' component ={WorksContainer} />
+  				<Route path = '/projects:id' component ={ProjectContainer} />
+  				<Route path = '/about' component ={AboutContainer} />
+  				<Route path = '/contact' component ={ContactContainer} />
+				</div>
+			</BrowserRouter>
 		)
 	}
 }

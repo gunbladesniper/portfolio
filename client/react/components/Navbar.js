@@ -1,13 +1,41 @@
 import React from 'react';
-import {Link} from 'react-router';
+import NavButton from './NavButton';
 
-const Navbar  = (props)=>{
+const buttonData = [
+{
+	path: '/',
+	label: 'Home',
+	className:'navbar-button'
+},
+{
+	path: '/works',
+	label: 'Works',
+	className:'navbar-button'
+},
+{
+	path: '/about',
+	label: 'About',
+	className:'navbar-button'
+},
+{
+	path: '/contact',
+	label: 'Contact',
+	className:'navbar-button'
+}
+
+];
+const Navbar = (props)=>{
 		return(
-			<div>
-				<h2>NavBar Here</h2>
+			<div id='navbar-container'>
+        <div className='nav-spacer'></div>
+				<ul id="navbar">
+					{buttonData.map((data, index)=>{
+						return <li key = {index}><NavButton key={index} path={data.path} label={data.label} className ={data.className}/></li>
+					})}
+				</ul>
+        <div className='nav-spacer'></div>
 			</div>
 		)
-	}
 }
 
 export default Navbar;
